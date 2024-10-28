@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #87CEEB; /* Warna langit */
+    transition: background-color 1s ease;
+}
+
+.grass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 500px; /* Tinggi rumput */
+    background-image: url('grass.png'); /* Ganti dengan path gambar rumput */
+    background-size: cover;
+    animation: sway 3s ease-in-out infinite;
+    transition: opacity 1s ease;
+}
+
+.fireworkdiv {
+    position: relative;
+    width: 100%; /* Buat lebar penuh */
+    height: 100vh;
+    z-index: 10; /* Pastikan kembang api muncul di atas */
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    display: none;
+    opacity: 0; /* Memulai dalam keadaan transparan */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Kemudian untuk animasi moveUp nya */
+@keyframes moveUp {
+    from { 
+        transform: translate(-50%, -50%);  /* posisi awal tetap ditengah */
+        opacity: 1;
+    }
+    to { 
+        transform: translate(-50%, -280px);  /* bergerak ke atas dengan tetap center horizontal */
+        opacity: 1;
+    }
+}
+
+.message.move-up {
+    animation: moveUp 1s ease forwards;
+}
+
+.message.show {
+    display: block;
+    opacity: 1; /* Muncul dengan efek fade-in */
+}
+
+
+#birthdayTitle {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#birthdayMessage {
+    color: white;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 1.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes sway {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
