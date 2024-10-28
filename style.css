@@ -45,7 +45,7 @@ body {
         opacity: 1;
     }
     to { 
-        transform: translate(-50%, -280px);  /* bergerak ke atas dengan tetap center horizontal */
+        transform: translate(-50%, -310px);  /* bergerak ke atas dengan tetap center horizontal */
         opacity: 1;
     }
 }
