@@ -53,11 +53,11 @@ window.onload = function() {
     })
     .then((willPlay) => {
         if (willPlay) {
-            swal("Enjoy!", {
+            swal("Hope u like it!", {
                 icon: "success",
             }).then(() => {
                 birthdaySong.play();
-                typeWriter("Happy Birthday, Lisza Indana Zulfa", titleElement, 150);
+                typeWriter("Happy Birthday, Lisza Indana Zulfa", titleElement, 200);
 
                 // Event handler untuk lagu
                 birthdaySong.addEventListener('play', () => {
@@ -80,7 +80,7 @@ Kamu sudah mencapai banyak hal, dan masa depanmu penuh dengan kesempatan menakju
 
 Semoga semua keinginanmu terkabul dan di usia ini membawa kebahagiaan luar biasa yang tak terlupakan. 🎂💖`;
                         
-                        typeWriter(birthdayText, messageElement, 50);
+                        typeWriter(birthdayText, messageElement, 30);
                     }, 10000);
 
                     // Memulai fireworks setelah 9.5 detik
