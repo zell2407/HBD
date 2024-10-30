@@ -45,8 +45,8 @@ window.onload = function() {
     }
 
     swal({
-        title: "Putar lagu buat next ke page selanjutnya yaa",
-        text: "Setelah menekan OK, maka akan otomatis pindah ke page selanjutnya",
+        title: "Tekan OK",
+        text: "Setelah menekan OK, maka akan otomatis memutar lagu dan pindah ke page selanjutnya",
         icon: "warning",
         buttons: true,
         dangerMode: true,
